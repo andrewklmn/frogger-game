@@ -28,7 +28,7 @@ Actor.prototype.render = function() {
 };
 
 // Enemies our player must avoid
-var Enemy = function({x, y, speed}) {
+var Enemy = function({x, y, speed, player}) {
     Actor.call(this,{sprite: enemySprite, x, y,speed});
 };
 Enemy.prototype = Object.create( Actor.prototype);
@@ -103,16 +103,19 @@ const allEnemies = [
     x: -150,
     y: 60,
     speed: 100,
+    player: player,
   }),
   new Enemy({
     x: -450,
     y: 145,
     speed: 80,
+    player: player,
   }),
   new Enemy({
     x: -100,
     y: 228,
     speed: 60,
+    player: player,
   }),
 ];
 // Place the player object in a variable called player
