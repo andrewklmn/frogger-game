@@ -97,6 +97,10 @@ Player.prototype.handleInput = function(key) {
 };
 
 // Now instantiate your objects.
+
+// Place the player object in a variable called player
+const player = new Player(defaultPlayerState);
+
 // Place all enemy objects in an array called allEnemies
 const allEnemies = [  
   new Enemy({
@@ -118,8 +122,6 @@ const allEnemies = [
     player: player,
   }),
 ];
-// Place the player object in a variable called player
-const player = new Player(defaultPlayerState);
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
