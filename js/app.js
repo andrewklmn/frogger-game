@@ -39,9 +39,9 @@ Enemy.prototype.update = function(dt) {
   if (this.x > playingArea.maxX + enemySize) {
     this.x = -enemySize;
   }
-  if (Math.abs(this.x - player.x) < minCollisionDistance
-        && Math.abs(this.y - player.y) < minCollisionDistance) {
-          player.reset(defaultPlayerState);
+  if (Math.abs(this.x - this.player.x) < minCollisionDistance
+        && Math.abs(this.y - this.player.y) < minCollisionDistance) {
+          this.player.reset(defaultPlayerState);
           alert('You lose!');
   }
 };
