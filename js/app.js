@@ -30,6 +30,7 @@ Actor.prototype.render = function() {
 // Enemies our player must avoid
 const Enemy = function({x, y, speed, player}) {
     Actor.call(this,{sprite: enemySprite, x, y,speed});
+    this.player = player;
 };
 Enemy.prototype = Object.create( Actor.prototype);
 Enemy.prototype.constructor = Actor;
